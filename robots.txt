@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /takk.html
+Disallow: /takk
 
 Sitemap: https://innst.is/sitemap.xml
