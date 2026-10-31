@@ -1,0 +1,56 @@
+/* Shared styles for the simple subpages (persónuvernd, takk). */
+:root {
+  --ink: #0F1B2A;
+  --ink-soft: #3A4A5C;
+  --paper: #EEF3F7;
+  --rule: #D3DEE8;
+  --core: #C8361B;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+a { color: var(--ink); }
+a:hover { color: var(--ink-soft); }
+.top {
+  border-bottom: 1px solid var(--rule);
+}
+.top a {
+  display: flex;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+h1, h2 {
+  font-family: Manrope, Inter, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+h1 { font-size: clamp(34px, 5vw, 52px); margin: 0 0 16px; }
+h2 { font-size: 24px; margin: 40px 0 8px; letter-spacing: -0.02em; }
+p, ul { margin: 0 0 14px; color: var(--ink-soft); }
+li { margin-bottom: 6px; }
+.meta { font-size: 14px; color: #4F5E6E; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { color: #FFFFFF; background: #13233A; }
