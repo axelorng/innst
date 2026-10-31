@@ -29,7 +29,7 @@ Ruslpóstsvörn: falinn reitur (`vefur-ruslpostur`) sem fólk sér ekki en vélm
 
 ## Eftir að klára
 
-- Fylla inn reiti í hornklofum, t.d. `[TÍMAGJALD]`, `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` og vsk (líka í `personuvernd.html`)
+- Fylla inn reiti í hornklofum, t.d. `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` (líka í `personuvernd.html`)
 - Setja inn myndir af Axel og Ólafi
 - Staðfesta lénið: allar slóðir í `index.html`, `sitemap.xml` og `robots.txt` gera ráð fyrir `https://innst.is/`
 - Hýsa letrið á vefnum sjálfum og fjarlægja þá málsgreinina um Google Fonts í `personuvernd.html`
