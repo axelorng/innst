@@ -27,6 +27,21 @@ Formið notar [Netlify Forms](https://docs.netlify.com/forms/setup/). Það virk
 
 Ruslpóstsvörn: falinn reitur (`vefur-ruslpostur`) sem fólk sér ekki en vélmenni fylla út.
 
+## Tímabundið falið
+
+Fjórir hlutar eru í kóðanum en faldir með `hidden` þar til þeir eru tilbúnir:
+
+- **Verkin** (`<section id="verkefni" hidden>`) og hlekkurinn „Verkin“ í valmyndinni
+- **Vefverslun**, verðkortið með merkinu „Netverslun“
+- **Smáforrit**, verðkortið með merkinu „Væntanlegt“
+- **Hverjir eru á bak við innst**, teymishlutinn neðst í Kjarnanum
+
+Til að birta hluta aftur: fjarlægja `hidden` af honum. Þegar Verkin koma aftur þarf líka að:
+
+- númera hlutana aftur (`01 — Verð` verður `02 — Verð` o.s.frv.)
+- setja „Vefverslun“ og „Smáforrit“ aftur í fellilistann í forminu þegar þau koma aftur
+- bæta vefversluninni aftur við schema (`makesOffer`) og `priceRange`
+
 ## Eftir að klára
 
 - Fylla inn reiti í hornklofum, t.d. `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` (líka í `personuvernd.html`)
