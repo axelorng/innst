@@ -8,8 +8,10 @@ Vefur innst: vandaðar vefsíður fyrir íslensk fyrirtæki.
 
 - `index.html` — forsíðan
 - `personuvernd.html` — persónuverndarstefna
+- `skilmalar.html` — skilmálar fyrir áskrift, staðgreidda vefi, hýsingu og umsjón
 - `takk.html` — síðan sem birtist eftir að fyrirspurn er send
 - `assets/sidur.css` — sameiginlegt útlit fyrir undirsíðurnar
+- `assets/letur/` — letrið (Manrope og Inter), hýst á vefnum sjálfum, aðeins latneskir og íslenskir stafir
 - `og-image.png` — myndin sem birtist þegar vefnum er deilt á Facebook, LinkedIn o.fl.
 - `robots.txt`, `sitemap.xml` — fyrir leitarvélar
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` — tákn fyrir vafra og síma
@@ -44,7 +46,7 @@ Til að birta hluta aftur: fjarlægja `hidden` af honum. Þegar Verkin koma aftu
 
 ## Eftir að klára
 
-- Fylla inn reiti í hornklofum, t.d. `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` (líka í `personuvernd.html`)
+- Fylla inn reiti í hornklofum, t.d. `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` (líka í `personuvernd.html` og `skilmalar.html`)
+- Láta lögfræðing eða endurskoðanda lesa yfir `skilmalar.html` áður en fyrsti samningur er gerður
 - Setja inn myndir af Axel og Ólafi
 - Staðfesta lénið: allar slóðir í `index.html`, `sitemap.xml` og `robots.txt` gera ráð fyrir `https://innst.is/`
-- Hýsa letrið á vefnum sjálfum og fjarlægja þá málsgreinina um Google Fonts í `personuvernd.html`
