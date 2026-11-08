@@ -29,6 +29,8 @@ Formið notar [Netlify Forms](https://docs.netlify.com/forms/setup/). Það virk
 
 Ruslpóstsvörn: falinn reitur (`vefur-ruslpostur`) sem fólk sér ekki en vélmenni fylla út.
 
+Uppruni: falinn reitur (`uppruni`) fyllist úr UTM-merkjum slóðarinnar, t.d. `facebook / prof1 / askrift`, eða úr vefnum sem vísaði á okkur. Án UTM-merkja og tilvísunar stendur `beint`. Notað til að bera saman auglýsingar í A/B-prófunum.
+
 ## Tímabundið falið
 
 Fjórir hlutar eru í kóðanum en faldir með `hidden` þar til þeir eru tilbúnir:

@@ -541,6 +541,7 @@ details summary::-webkit-details-marker{display:none}
 <form name="samband" method="POST" action="/takk" data-netlify="true" netlify-honeypot="vefur-ruslpostur" style="display: flex; flex-direction: column; gap: 18px; background: #0E1A2B; border: 1px solid #22364C; border-radius: 16px; padding: 32px">
 <input type="hidden" name="form-name" value="samband">
 <input type="hidden" name="subject" value="Ný fyrirspurn af innst.is (%{submissionId})">
+<input type="hidden" name="uppruni" value="beint">
 <p style="position: absolute; left: -9999px" aria-hidden="true"><label>Ekki fylla út <input name="vefur-ruslpostur" tabindex="-1" autocomplete="off"></label></p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 18px">
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 500; color: #EEF3F7">Nafn
@@ -585,5 +586,15 @@ details summary::-webkit-details-marker{display:none}
 </footer>
 
 </div>
+<script>
+/* Skráir hvaðan gesturinn kom (UTM-merki auglýsingar eða vefur sem vísaði á okkur) í falda reitinn „uppruni“. Engar vafrakökur. */
+(function(){
+  var k='innst-uppruni', v=null, q=new URLSearchParams(location.search);
+  if(q.get('utm_source')){v=[q.get('utm_source'),q.get('utm_campaign'),q.get('utm_content')].filter(Boolean).join(' / ');}
+  else if(document.referrer){try{var h=new URL(document.referrer).hostname;if(h&&h!==location.hostname)v='vísað frá '+h;}catch(e){}}
+  try{if(v)sessionStorage.setItem(k,v);else v=sessionStorage.getItem(k);}catch(e){}
+  var f=document.querySelector('input[name="uppruni"]'); if(f&&v)f.value=v.slice(0,120);
+})();
+</script>
 </body>
 </html>
