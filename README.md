@@ -46,6 +46,8 @@ Til að birta hluta aftur: fjarlægja `hidden` af honum. Þegar Verkin koma aftu
 
 ## Eftir að klára
 
+- Kennitala og heimilisfang eru falin með `<span hidden>` í fætinum á `index.html`, í `personuvernd.html` og `skilmalar.html`. Þegar fyrirtækið er skráð: fylla inn og fjarlægja `hidden`. Ef fyrirtækið skráir sig á VSK-skrá má bæta VSK-númerinu við á sömu staði.
+
 - Fylla inn reiti í hornklofum, t.d. `[BÓKUNARHLEKKUR]`, `[SÍMANÚMER]`, `[KENNITALA]`, `[HEIMILISFANG]` (líka í `personuvernd.html` og `skilmalar.html`)
 - Láta lögfræðing eða endurskoðanda lesa yfir `skilmalar.html` áður en fyrsti samningur er gerður
 - Setja inn myndir af Axel og Ólafi
