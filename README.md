@@ -42,6 +42,15 @@ Fjórir hlutar eru í kóðanum en faldir með `hidden` þar til þeir eru tilb�
 - **Smáforrit**, verðkortið með merkinu „Væntanlegt“
 - **Hverjir eru á bak við innst**, teymishlutinn neðst í Kjarnanum
 
+### Áskrift, hýsing og umsjón (falið þar til greiðslusíða er komin)
+
+Allt sem fjallar um mánaðargreiðslur er falið með `hidden`, svo vefurinn sýnir bara staðgreiðslu:
+
+- `index.html`: flipinn „Áskrift“ (`.g-tabs`) og `.g-pane-askrift`, línurnar „+ 3.990 kr. á mánuði fyrir hýsingu“, „Hýsing, umsjón og vinnustundir eftir þörfum“ í Sérlausn, Umsjón/Vöxtur (`<!-- CARE PLANS -->`), „eða 12.990 kr. á mánuði í áskrift“ efst, spurningin „Hvernig virkar áskriftin?“ og valmöguleikarnir Umsjón/Vöxtur í forminu
+- Í „01 — Verð“ og í algengum spurningum er ný málsgrein sýnileg og gamla málsgreinin falin beint fyrir neðan (`<p hidden>`). Til að birta aftur: eyða nýju málsgreininni og fjarlægja `hidden` af þeirri gömlu
+- `skilmalar.html`: kaflarnir „Áskrift“ og „Umsjón og Vöxtur“ (`<div hidden>`) og þrjú atriði merkt `<li hidden>`
+- Schema: áskriftar- og umsjónartilboðin voru tekin út úr `makesOffer` og `priceRange`. Þau eru í git-sögunni frá því fyrir þessa breytingu
+
 Til að birta hluta aftur: fjarlægja `hidden` af honum. Þegar Verkin koma aftur þarf líka að:
 
 - númera hlutana aftur (`01 — Verð` verður `02 — Verð` o.s.frv.)

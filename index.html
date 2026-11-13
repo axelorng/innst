@@ -32,7 +32,7 @@
   "email": "hallo@innst.is",
   "areaServed": { "@type": "Country", "name": "Ísland" },
   "knowsLanguage": ["is", "en"],
-  "priceRange": "59.990 kr. – 109.990 kr., eða 12.990 kr. á mánuði í áskrift (án vsk)",
+  "priceRange": "59.990 kr. – 109.990 kr. (án vsk)",
   "founder": [
     { "@type": "Person", "name": "Axel Örn Gíslason", "jobTitle": "Stofnandi", "email": "axel@innst.is" },
     { "@type": "Person", "name": "Ólafur Rafn Gíslason", "jobTitle": "Meðstofnandi", "email": "olafur@innst.is" }
@@ -40,11 +40,7 @@
   "makesOffer": [
     { "@type": "Offer", "price": "59990", "priceCurrency": "ISK", "itemOffered": { "@type": "Service", "name": "Lendingarsíða" } },
     { "@type": "Offer", "price": "109990", "priceCurrency": "ISK", "itemOffered": { "@type": "Service", "name": "Fyrirtækjavefur" } },
-    { "@type": "Offer", "price": "19990", "priceCurrency": "ISK", "itemOffered": { "@type": "Service", "name": "Sýnileiki á Google" } },
-    { "@type": "Offer", "price": "19990", "priceCurrency": "ISK", "itemOffered": { "@type": "Service", "name": "Vöxtur: mánaðarleg umsjón og árangursyfirlit" } },
-    { "@type": "Offer", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "12990", "priceCurrency": "ISK", "unitCode": "MON" }, "itemOffered": { "@type": "Service", "name": "Lendingarsíða í áskrift" } },
-    { "@type": "Offer", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "18990", "priceCurrency": "ISK", "unitCode": "MON" }, "itemOffered": { "@type": "Service", "name": "Fyrirtækjavefur í áskrift" } },
-    { "@type": "Offer", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "4990", "priceCurrency": "ISK", "unitCode": "MON" }, "itemOffered": { "@type": "Service", "name": "Umsjón" } }
+    { "@type": "Offer", "price": "19990", "priceCurrency": "ISK", "itemOffered": { "@type": "Service", "name": "Sýnileiki á Google" } }
   ]
 }
 </script>
@@ -91,7 +87,7 @@ details summary::-webkit-details-marker{display:none}
 <div style="display: flex; flex-direction: column; gap: 28px">
 <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #556576">Vefstofa fyrir íslensk þjónustufyrirtæki</p>
 <h1 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(42px, 6.2vw, 76px); line-height: 1.02; letter-spacing: -0.035em">Vandað alla leið inn að kjarna.</h1>
-<p style="margin: 0; font-size: 19px; color: #3A4A5C; max-width: 34em">Vefsíður sem eru hannaðar til að skila fyrirspurnum, ekki bara til að vera til. Hjá innst vinna markaðssérfræðingur og forritari saman: við smíðum hraðan og vandaðan vef frá grunni og sýnum þér svo í hverjum mánuði hverju hann skilar.</p>
+<p style="margin: 0; font-size: 19px; color: #3A4A5C; max-width: 34em">Vefsíður sem eru hannaðar til að skila fyrirspurnum, ekki bara til að vera til. Hjá innst vinna markaðssérfræðingur og forritari saman: við smíðum hraðan og vandaðan vef frá grunni og sýnum þér hverju hann skilar.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#verd" style="background: #0F1B2A; color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 8px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center">Sjá verð</a>
 <a href="#samband" style="border: 1.5px solid #0F1B2A; color: #0F1B2A; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 8px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center">Bóka fund</a>
@@ -119,7 +115,7 @@ details summary::-webkit-details-marker{display:none}
 <div style="position: absolute; left: -8px; bottom: 24px; background: #FFFFFF; border-radius: 12px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; box-shadow: 0 12px 32px -12px rgba(13,15,18,0.3)">
 <span style="font-size: 13px; color: #3A4A5C">Lendingarsíða</span>
 <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #0F1B2A">59.990 kr. <span style="font-size: 13px; font-weight: 600; color: #4F5E6E">án vsk</span></span>
-<span style="font-size: 13px; font-weight: 600; color: #4F5E6E">eða 12.990 kr. á mánuði í áskrift</span>
+<span hidden style="font-size: 13px; font-weight: 600; color: #4F5E6E">eða 12.990 kr. á mánuði í áskrift</span>
 </div>
 </div>
 </section>
@@ -163,13 +159,14 @@ details summary::-webkit-details-marker{display:none}
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
 <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4F5E6E">01 — Verð</p>
 <h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.03em">Hversu djúpt viltu fara?</h2>
-<p style="margin: 0; color: #3A4A5C">Veldu hvort þú staðgreiðir vefinn og greiðir aðeins fyrir hýsingu eftir það, eða greiðir hann mánaðarlega í áskrift, án stofngjalds. Öll verð eru án virðisaukaskatts.</p>
+<p style="margin: 0; color: #3A4A5C">Fast verð, greitt einu sinni, og vefurinn er þín eign. Öll verð eru án virðisaukaskatts.</p>
+<p hidden style="margin: 0; color: #3A4A5C">Veldu hvort þú staðgreiðir vefinn og greiðir aðeins fyrir hýsingu eftir það, eða greiðir hann mánaðarlega í áskrift, án stofngjalds. Öll verð eru án virðisaukaskatts.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 24px; position: relative">
 <input type="radio" name="greidsla" id="g-stadgreida" class="g-radio" checked>
 <input type="radio" name="greidsla" id="g-askrift" class="g-radio">
-<div class="g-tabs" role="radiogroup" aria-label="Greiðsluleið"><label for="g-stadgreida">Staðgreiða</label><label for="g-askrift">Áskrift</label></div>
-<div class="g-pane-askrift" style="display: flex; flex-direction: column; gap: 20px">
+<div hidden class="g-tabs" role="radiogroup" aria-label="Greiðsluleið"><label for="g-stadgreida">Staðgreiða</label><label for="g-askrift">Áskrift</label></div>
+<div hidden class="g-pane-askrift" style="display: flex; flex-direction: column; gap: 20px">
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; align-items: stretch">
 <div style="border: 1px solid #C3D1DE; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 22px; background: #FFFFFF">
 <div style="display: flex; flex-direction: column; gap: 8px">
@@ -222,7 +219,7 @@ details summary::-webkit-details-marker{display:none}
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Fleiri síður og fleiri tungumál</li>
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Innskráning og læst svæði</li>
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Tengingar við bókhald, CRM og önnur kerfi</li>
-<li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Hýsing, umsjón og vinnustundir eftir þörfum</li>
+<li hidden style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Hýsing, umsjón og vinnustundir eftir þörfum</li>
 </ul>
 <a href="#samband" style="margin-top: auto; border: 1.5px solid #0F1B2A; color: #0F1B2A; text-decoration: none; font-weight: 600; padding: 14px 20px; border-radius: 8px; min-height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center">Fá tilboð</a>
 </div>
@@ -243,7 +240,7 @@ details summary::-webkit-details-marker{display:none}
 </div>
 <div style="display: flex; flex-direction: column; gap: 4px">
 <div style="display: flex; align-items: baseline; gap: 6px"><span style="font-family: Manrope, sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.03em">59.990</span><span style="color: #3A4A5C; font-size: 16px">kr.</span></div>
-<span style="font-size: 15px; color: #3A4A5C">+ 3.990 kr. á mánuði fyrir hýsingu</span>
+<span hidden style="font-size: 15px; color: #3A4A5C">+ 3.990 kr. á mánuði fyrir hýsingu</span>
 </div>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Sérhönnuð í þínum litum og með þínu merki</li>
@@ -263,7 +260,7 @@ details summary::-webkit-details-marker{display:none}
 </div>
 <div style="display: flex; flex-direction: column; gap: 4px">
 <div style="display: flex; align-items: baseline; gap: 6px"><span style="font-family: Manrope, sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.03em">109.990</span><span style="color: #3A4A5C; font-size: 16px">kr.</span></div>
-<span style="font-size: 15px; color: #3A4A5C">+ 3.990 kr. á mánuði fyrir hýsingu</span>
+<span hidden style="font-size: 15px; color: #3A4A5C">+ 3.990 kr. á mánuði fyrir hýsingu</span>
 </div>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Allt sem fylgir lendingarsíðu</li>
@@ -288,7 +285,7 @@ details summary::-webkit-details-marker{display:none}
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Fleiri síður og fleiri tungumál</li>
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Innskráning og læst svæði</li>
 <li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Tengingar við bókhald, CRM og önnur kerfi</li>
-<li style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Hýsing, umsjón og vinnustundir eftir þörfum</li>
+<li hidden style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4E7A2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5L20 7"></path></svg>Hýsing, umsjón og vinnustundir eftir þörfum</li>
 </ul>
 <a href="#samband" style="margin-top: auto; border: 1.5px solid #0F1B2A; color: #0F1B2A; text-decoration: none; font-weight: 600; padding: 14px 20px; border-radius: 8px; min-height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center">Fá tilboð</a>
 </div>
@@ -332,8 +329,8 @@ details summary::-webkit-details-marker{display:none}
 </div>
 </div>
 
-<!-- CARE PLANS -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
+<!-- CARE PLANS (falið þar til greiðslusíða er komin) -->
+<div hidden style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
 <div style="border-radius: 16px; padding: 28px; background: #0F1B2A; color: #EEF3F7; display: flex; flex-direction: column; gap: 14px">
 <span style="display: inline-flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 21px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>Umsjón · 4.990 kr. á mánuði</span>
 <span style="font-size: 16px; color: #CDD7E2">Fyrir þá sem staðgreiða vefinn, eða eiga vef frá öðrum. Öryggisuppfærslur, afrit og 1 vinnustund á mánuði fyrir breytingar, og hýsing ef vefurinn er frá innst. Þú sendir skilaboð, við græjum það.</span>
@@ -497,23 +494,27 @@ details summary::-webkit-details-marker{display:none}
 <div style="display: flex; flex-direction: column">
 <details open="" style="border-top: 1px solid #24384F; padding: 20px 0">
 <summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Hvað kostar lendingarsíða?</summary>
-<p style="margin: 12px 0 0; color: #CDD7E2">Staðgreidd kostar hún 59.990 kr. og svo 3.990 kr. á mánuði fyrir hýsingu, án vsk. Í áskrift kostar hún 12.990 kr. á mánuði, með hýsingu og 1 vinnustund á mánuði, og binditíminn er 12 mánuðir.</p>
+<p style="margin: 12px 0 0; color: #CDD7E2">Hún kostar 59.990 kr. án vsk, greitt einu sinni. Fyrirtækjavefur með nokkrum síðum kostar 109.990 kr.</p>
+<p hidden style="margin: 12px 0 0; color: #CDD7E2">Staðgreidd kostar hún 59.990 kr. og svo 3.990 kr. á mánuði fyrir hýsingu, án vsk. Í áskrift kostar hún 12.990 kr. á mánuði, með hýsingu og 1 vinnustund á mánuði, og binditíminn er 12 mánuðir.</p>
 </details>
-<details style="border-top: 1px solid #24384F; padding: 20px 0">
+<details hidden style="border-top: 1px solid #24384F; padding: 20px 0">
 <summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Hvernig virkar áskriftin?</summary>
 <p style="margin: 12px 0 0; color: #CDD7E2">Þú greiðir ekkert stofngjald, bara 12.990 kr. á mánuði fyrir lendingarsíðu eða 18.990 kr. fyrir fyrirtækjavef, án vsk. Hýsing, öryggi og 1 vinnustund á mánuði eru innifalin, en ónotaður tími færist ekki á milli mánaða. Binditíminn er 12 mánuðir og eftir það heldur áskriftin áfram mánaðarlega. Viltu eiga vefinn getur þú keypt hann út eftir 12 mánuði.</p>
 </details>
 <details style="border-top: 1px solid #24384F; padding: 20px 0">
-<summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Þarf ég að eiga lén og hýsingu?</summary>
-<p style="margin: 12px 0 0; color: #CDD7E2">Nei. Hýsing er innifalin í áskriftinni, og ef þú staðgreiðir kostar hún 3.990 kr. á mánuði án vsk. Ef þú átt lén tengjum við vefinn við það. Ef ekki, hjálpum við þér að skrá það á þínu nafni hjá ISNIC, svo lénið er alltaf þitt.</p>
+<summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Þarf ég að eiga lén?</summary>
+<p style="margin: 12px 0 0; color: #CDD7E2">Nei. Ef þú átt lén tengjum við vefinn við það. Ef ekki, hjálpum við þér að skrá það á þínu nafni hjá ISNIC, svo lénið er alltaf þitt.</p>
+<p hidden style="margin: 12px 0 0; color: #CDD7E2">Nei. Hýsing er innifalin í áskriftinni, og ef þú staðgreiðir kostar hún 3.990 kr. á mánuði án vsk. Ef þú átt lén tengjum við vefinn við það. Ef ekki, hjálpum við þér að skrá það á þínu nafni hjá ISNIC, svo lénið er alltaf þitt.</p>
 </details>
 <details style="border-top: 1px solid #24384F; padding: 20px 0">
 <summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Hver á vefinn þegar hann er tilbúinn?</summary>
-<p style="margin: 12px 0 0; color: #CDD7E2">Lénið og efnið eru alltaf þín eign. Ef þú staðgreiðir átt þú vefinn líka strax. Í áskrift getur þú keypt vefinn út eftir 12 mánuði.</p>
+<p style="margin: 12px 0 0; color: #CDD7E2">Þú. Lénið, efnið og vefurinn sjálfur eru þín eign um leið og hann er greiddur.</p>
+<p hidden style="margin: 12px 0 0; color: #CDD7E2">Lénið og efnið eru alltaf þín eign. Ef þú staðgreiðir átt þú vefinn líka strax. Í áskrift getur þú keypt vefinn út eftir 12 mánuði.</p>
 </details>
 <details style="border-top: 1px solid #24384F; padding: 20px 0">
 <summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Hvað ef ég þarf breytingar seinna?</summary>
-<p style="margin: 12px 0 0; color: #CDD7E2">Í áskrift og umsjón er 1 vinnustund á mánuði innifalin. Umfram það kostar vinnan 14.990 kr. á klukkustund án vsk. Ef þú vilt reglulega vinnu og mánaðarlegt yfirlit yfir árangur hentar Vöxtur betur.</p>
+<p style="margin: 12px 0 0; color: #CDD7E2">Þú sendir okkur skilaboð og við lögum það. Vinnan kostar 14.990 kr. á klukkustund án vsk og við segjum þér alltaf fyrirfram hvað verkið tekur langan tíma.</p>
+<p hidden style="margin: 12px 0 0; color: #CDD7E2">Í áskrift og umsjón er 1 vinnustund á mánuði innifalin. Umfram það kostar vinnan 14.990 kr. á klukkustund án vsk. Ef þú vilt reglulega vinnu og mánaðarlegt yfirlit yfir árangur hentar Vöxtur betur.</p>
 </details>
 <details style="border-top: 1px solid #24384F; border-bottom: 1px solid #24384F; padding: 20px 0">
 <summary style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; min-height: 44px; display: flex; align-items: center">Hvenær þarf ég fund frekar en fast verð?</summary>
@@ -557,8 +558,8 @@ details summary::-webkit-details-marker{display:none}
 <option>Fyrirtækjavef</option>
 <option>Sérsniðna lausn</option>
 <option>Sýnileika</option>
-<option>Umsjón fyrir vef sem ég á</option>
-<option>Vöxt (mánaðarleg umsjón)</option>
+<!-- <option>Umsjón fyrir vef sem ég á</option> -->
+<!-- <option>Vöxt (mánaðarleg umsjón)</option> -->
 <option>Ekki viss enn</option>
 </select>
 </label>
