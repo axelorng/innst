@@ -54,7 +54,6 @@ Allt sem fjallar um mánaðargreiðslur er falið með `hidden`, svo vefurinn s�
 
 Til að birta hluta aftur: fjarlægja `hidden` af honum. Þegar Verkin koma aftur þarf líka að:
 
-- númera hlutana aftur (`01 — Verð` verður `02 — Verð` o.s.frv.)
 - setja „Vefverslun“ og „Smáforrit“ aftur í fellilistann í forminu þegar þau koma aftur
 - bæta vefversluninni aftur við schema (`makesOffer`) og `priceRange`
 
