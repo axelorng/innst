@@ -6,6 +6,7 @@ Vefur innst: vandaðar vefsíður fyrir íslensk fyrirtæki.
 
 ## Skrár
 
+- `CLAUDE.md` — samhengi og vinnureglur fyrir Claude Code
 - `index.html` — forsíðan
 - `personuvernd.html` — persónuverndarstefna
 - `skilmalar.html` — skilmálar fyrir áskrift, staðgreidda vefi, hýsingu og umsjón
