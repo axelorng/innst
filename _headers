@@ -1,0 +1,26 @@
+# Skyndiminni (cache) fyrir kyrrstæðar skrár. HTML-síðurnar sjálfar halda sjálfgefnu stillingu Netlify
+# (max-age=0, must-revalidate) svo breytingar sjást strax.
+
+# Letrið breytist nánast aldrei: geymt í ár. Ef letri er breytt þarf að gefa skránni nýtt nafn.
+/assets/letur/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS: einn dagur, svo breytingar skila sér fljótt.
+/assets/letur/letur.css
+  Cache-Control: public, max-age=86400
+/assets/sidur.css
+  Cache-Control: public, max-age=86400
+
+# Myndir, merki og tákn: ein vika.
+/assets/merki/*
+  Cache-Control: public, max-age=604800
+/assets/verkefni/*
+  Cache-Control: public, max-age=604800
+/favicon.svg
+  Cache-Control: public, max-age=604800
+/favicon-32.png
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+/og-image.png
+  Cache-Control: public, max-age=604800

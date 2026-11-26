@@ -50,7 +50,26 @@
 <style>
 body{margin:0;background:#EEF3F7}
 [hidden]{display:none !important}
-@media (max-width: 480px){.nav-tolva{display:none}}
+.stokk{position:absolute;left:16px;top:-80px;z-index:10;background:#0F1B2A;color:#FFFFFF;padding:12px 18px;border-radius:8px;font-weight:600;text-decoration:none}
+.stokk:focus{top:12px;color:#FFFFFF}
+.nav{max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.nav-hlekkir{margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:24px;font-size:15px;font-weight:500}
+.nav-hlekkir a{text-decoration:none}
+.nav-adgerdir{display:flex;align-items:center;gap:8px}
+.nav-fundur{text-decoration:none;background:#0F1B2A;color:#FFFFFF;font-size:15px;font-weight:500;padding:12px 18px;border-radius:8px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+.nav-fundur:hover{color:#FFFFFF;background:#1F3350}
+.nav-takki{display:none;width:44px;height:44px;padding:0;border:1px solid #C3D1DE;border-radius:8px;background:#FFFFFF;color:#0F1B2A;cursor:pointer;align-items:center;justify-content:center}
+.nav-takki:focus-visible,.nav-fundur:focus-visible{outline:2px solid #C8361B;outline-offset:2px}
+.nav-takki .loka,.nav[data-valmynd="opin"] .nav-takki .opna{display:none}
+.nav[data-valmynd="opin"] .nav-takki .loka{display:block}
+@media (max-width: 639px){
+.nav{padding:10px 16px}
+.nav-adgerdir{margin-left:auto}
+.nav-hlekkir{order:3;width:100%;margin:0;flex-direction:column;align-items:stretch;gap:0;font-size:17px}
+.nav-hlekkir a{padding:12px 0;min-height:44px;box-sizing:border-box;border-top:1px solid #D3DEE8}
+.nav[data-valmynd] .nav-takki{display:inline-flex}
+.nav[data-valmynd="lokud"] .nav-hlekkir{display:none}
+}
 .g-radio{position:absolute;opacity:0;pointer-events:none}
 .g-tabs{display:inline-flex;align-self:flex-start;background:#FFFFFF;border:1px solid #C3D1DE;border-radius:999px;padding:4px;gap:4px}
 .g-tabs label{font-weight:600;font-size:15px;padding:10px 22px;min-height:44px;box-sizing:border-box;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;color:#0F1B2A}
@@ -66,23 +85,32 @@ details summary::-webkit-details-marker{display:none}
 </head>
 <body>
 <div style="font-family: Inter, system-ui, sans-serif; color: #0F1B2A; background: #EEF3F7; font-size: 17px; line-height: 1.6">
+<a class="stokk" href="#efni">Fara í efni</a>
 
 <!-- NAV -->
 <header style="border-bottom: 1px solid #D3DEE8; background: #EEF3F7">
-<nav style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<nav class="nav" aria-label="Aðalvalmynd">
 <a href="#efst" aria-label="innst, forsíða" style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.04em; text-decoration: none; color: #0F1B2A; display: flex; align-items: center; gap: 10px">
 <svg viewBox="0 0 250 64" width="125" height="32" aria-hidden="true"><rect x="4.5" y="4.5" width="55" height="55" rx="14" fill="none" stroke="#0F1B2A" stroke-width="9"></rect><rect x="18.5" y="18.5" width="27" height="27" rx="6" fill="none" stroke="#0F1B2A" stroke-width="9"></rect><rect x="27.5" y="27.5" width="9" height="9" rx="2" fill="#C8361B"></rect><g transform="translate(86 0)"><g fill="none" stroke="#0F1B2A" stroke-width="9"><path d="M4.5 20V64"></path><path d="M21.5 20V64M21.5 38.5A14 14 0 0 1 49.5 38.5V64"></path><path d="M66.5 20V64M66.5 38.5A14 14 0 0 1 94.5 38.5V64"></path><path d="M135 24.5H122A10.5 8.75 0 0 0 111.5 33.25A10.5 8.75 0 0 0 122 42A10.5 8.75 0 0 1 132.5 50.75A10.5 8.75 0 0 1 122 59.5H108"></path><path d="M150 8V52A7.5 7.5 0 0 0 157.5 59.5H164M143 24.5H164"></path></g><rect x="0" y="4" width="9" height="9" rx="2" fill="#C8361B"></rect></g></svg>
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500">
-<a hidden href="#verkefni" style="text-decoration: none">Verkin</a>
-<a href="#verd" style="text-decoration: none">Verð</a>
-<a href="#ferlid" style="text-decoration: none">Ferlið</a>
-<a class="nav-tolva" href="#kjarninn" style="text-decoration: none">Kjarninn</a>
-<a href="#spurningar" style="text-decoration: none">Spurningar</a>
-<a href="#samband" style="text-decoration: none; background: #0F1B2A; color: #FFFFFF; padding: 12px 18px; border-radius: 8px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Bóka fund</a>
+<div class="nav-hlekkir" id="valmynd">
+<a hidden href="#verkefni">Verkin</a>
+<a href="#verd">Verð</a>
+<a href="#ferlid">Ferlið</a>
+<a href="#kjarninn">Kjarninn</a>
+<a href="#spurningar">Spurningar</a>
+</div>
+<div class="nav-adgerdir">
+<a class="nav-fundur" href="#samband">Bóka fund</a>
+<button class="nav-takki" type="button" aria-expanded="false" aria-controls="valmynd" aria-label="Valmynd">
+<svg class="opna" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+<svg class="loka" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</button>
 </div>
 </nav>
 </header>
+
+<main id="efni" tabindex="-1">
 
 <!-- HERO -->
 <section id="efst" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 56px; align-items: center">
@@ -225,7 +253,7 @@ details summary::-webkit-details-marker{display:none}
 </div>
 <div style="border: 1px solid #C3D1DE; border-radius: 16px; padding: 20px 24px; background: #EEF3F7; display: flex; flex-direction: column; gap: 6px">
 <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px">Svona virkar áskriftin</span>
-<span style="font-size: 15px; color: #3A4A5C">Binditíminn er 12 mánuðir og eftir það heldur áskriftin áfram mánaðarlega með eins mánaðar uppsagnarfresti. Vinnustundin færist ekki á milli mánaða og vinna umfram hana kostar 14.990 kr. á klukkustund. Viltu eiga vefinn? Eftir 12 mánuði getur þú keypt hann út fyrir 29.990 kr. (lendingarsíða) eða 49.990 kr. (fyrirtækjavefur). <a href="skilmalar.html" style="color: #0F1B2A">Lesa skilmálana</a></span>
+<span style="font-size: 15px; color: #3A4A5C">Binditíminn er 12 mánuðir og eftir það heldur áskriftin áfram mánaðarlega með eins mánaðar uppsagnarfresti. Vinnustundin færist ekki á milli mánaða og vinna umfram hana kostar 14.990 kr. á klukkustund. Viltu eiga vefinn? Eftir 12 mánuði getur þú keypt hann út fyrir 29.990 kr. (lendingarsíða) eða 49.990 kr. (fyrirtækjavefur). <a href="/skilmalar" style="color: #0F1B2A">Lesa skilmálana</a></span>
 </div>
 </div>
 <div class="g-pane-stadgreida">
@@ -559,22 +587,36 @@ details summary::-webkit-details-marker{display:none}
 </label>
 <label style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.5; color: #CDD7E2; cursor: pointer">
 <input type="checkbox" name="samthykki" value="já" required style="flex: none; width: 20px; height: 20px; margin: 2px 0 0; accent-color: #C8361B">
-<span>Ég samþykki að innst noti upplýsingarnar til að svara fyrirspurninni. Nánar í <a href="personuvernd.html" style="color: #EEF3F7">persónuverndarstefnu</a>.</span>
+<span>Ég samþykki að innst noti upplýsingarnar til að svara fyrirspurninni. Nánar í <a href="/personuvernd" style="color: #EEF3F7">persónuverndarstefnu</a>.</span>
 </label>
 <button type="submit" style="font: inherit; font-weight: 600; background: #EEF3F7; color: #08111D; border: 0; padding: 14px 24px; border-radius: 8px; min-height: 52px; cursor: pointer">Senda</button>
 </form>
 </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer style="background: #08111D; border-top: 1px solid #13233A">
 <div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #A3B3C6">
 <svg viewBox="0 0 250 64" width="100" height="26" role="img" aria-label="innst"><rect x="4.5" y="4.5" width="55" height="55" rx="14" fill="none" stroke="#EEF3F7" stroke-width="9"></rect><rect x="18.5" y="18.5" width="27" height="27" rx="6" fill="none" stroke="#EEF3F7" stroke-width="9"></rect><rect x="27.5" y="27.5" width="9" height="9" rx="2" fill="#C8361B"></rect><g transform="translate(86 0)"><g fill="none" stroke="#EEF3F7" stroke-width="9"><path d="M4.5 20V64"></path><path d="M21.5 20V64M21.5 38.5A14 14 0 0 1 49.5 38.5V64"></path><path d="M66.5 20V64M66.5 38.5A14 14 0 0 1 94.5 38.5V64"></path><path d="M135 24.5H122A10.5 8.75 0 0 0 111.5 33.25A10.5 8.75 0 0 0 122 42A10.5 8.75 0 0 1 132.5 50.75A10.5 8.75 0 0 1 122 59.5H108"></path><path d="M150 8V52A7.5 7.5 0 0 0 157.5 59.5H164M143 24.5H164"></path></g><rect x="0" y="4" width="9" height="9" rx="2" fill="#C8361B"></rect></g></svg>
-<span>© 2026 innst<span hidden> · kt. [KENNITALA]</span> · <a href="mailto:hallo@innst.is" style="color: #CDD7E2">hallo@innst.is</a> · <a href="skilmalar.html" style="color: #CDD7E2">Skilmálar</a> · <a href="personuvernd.html" style="color: #CDD7E2">Persónuvernd</a></span>
+<span>© 2026 innst<span hidden> · kt. [KENNITALA]</span> · <a href="mailto:hallo@innst.is" style="color: #CDD7E2">hallo@innst.is</a> · <a href="/skilmalar" style="color: #CDD7E2">Skilmálar</a> · <a href="/personuvernd" style="color: #CDD7E2">Persónuvernd</a></span>
 </div>
 </footer>
 
 </div>
+<script>
+/* Valmynd í síma: hnappurinn opnar og lokar hlekkjunum. Án JavaScript sjást hlekkirnir alltaf. */
+(function(){
+  var nav=document.querySelector('.nav'), takki=nav&&nav.querySelector('.nav-takki');
+  if(!takki)return;
+  function stilla(opin){nav.setAttribute('data-valmynd',opin?'opin':'lokud');takki.setAttribute('aria-expanded',opin?'true':'false');takki.setAttribute('aria-label',opin?'Loka valmynd':'Valmynd');}
+  stilla(false);
+  takki.addEventListener('click',function(){stilla(nav.getAttribute('data-valmynd')!=='opin');});
+  nav.querySelectorAll('.nav-hlekkir a').forEach(function(a){a.addEventListener('click',function(){stilla(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.getAttribute('data-valmynd')==='opin'){stilla(false);takki.focus();}});
+})();
+</script>
 <script>
 /* Skráir hvaðan gesturinn kom (UTM-merki auglýsingar eða vefur sem vísaði á okkur) í falda reitinn „uppruni“. Engar vafrakökur. */
 (function(){
