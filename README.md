@@ -16,6 +16,7 @@ Vefur innst: vandaðar vefsíður fyrir íslensk fyrirtæki.
 - `og-image.png` — myndin sem birtist þegar vefnum er deilt á Facebook, LinkedIn o.fl.
 - `robots.txt`, `sitemap.xml` — fyrir leitarvélar
 - `_redirects` — stuttir hlekkir fyrir samfélagsmiðla: innst.is/ig og innst.is/fb senda á forsíðuna með UTM-merki
+- `_headers` — skyndiminni: letur í ár (nýtt skráarnafn ef letri er breytt), CSS í dag, myndir í viku
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` — tákn fyrir vafra og síma
 - `assets/verkefni/` — skjámyndir af verkefnum
 - `assets/merki/` — merki innst í öllum útgáfum (SVG og PNG)

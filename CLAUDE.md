@@ -59,7 +59,9 @@ Vefurinn innst.is selur vandaða, sérforritaða vefi á föstu verði. Vefstofa
 
 ### Innihald forsíðu (staðan 25. nóv. 2026, PR #12)
 - **Valmynd:** Verð, Ferlið, Kjarninn og Spurningar.
-  - Kjarninn er falinn undir 480px breidd (`.nav-tolva`) svo valmyndin brotni ekki í síma.
+  - Undir 640px breidd: merkið, „Bóka fund“ og valmyndarhnappur í einni línu; hlekkirnir opnast undir. Án JavaScript sjást hlekkirnir alltaf.
+  - Hlekkur „Fara í efni“ birtist við Tab og efnið er í `<main id="efni">`.
+  - Innri hlekkir og canonical nota slóðir án `.html` (`/personuvernd`, `/skilmalar`).
 - **Hetja:**
   - h1: „Vandað inn að kjarna.“
   - Texti: „Hraðir og vandaðir vefir, smíðaðir frá grunni á föstu verði.“
